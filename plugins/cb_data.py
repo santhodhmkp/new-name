@@ -4,6 +4,7 @@ from pyrogram.types import (  InlineKeyboardButton, InlineKeyboardMarkup,ForceRe
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from helper.database import find
+from config import ADMIN
 import os 
 import humanize
 from PIL import Image
