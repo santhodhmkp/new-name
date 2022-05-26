@@ -14,7 +14,7 @@ async def is_not_subscribed(client, message):
            ])
        )
     
-@Client.on_message(filters.private & filters.command(["start"]))
+@Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["start"]))
 async def start(client, message):
     insert(int(message.chat.id))
     await message.reply_photo(
@@ -33,7 +33,7 @@ async def start(client, message):
        )
     return
 
-@Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
+@Client.on_message(filters.private & filters.user(ADMIN) & ( filters.document | filters.audio | filters.video ))
 async def send_doc(client, message):
     file = getattr(message, message.media.value)
     filename = file.file_name
