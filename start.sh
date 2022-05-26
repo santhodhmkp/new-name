@@ -1,12 +1,16 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/MuhaKn/RENAMER_LEGEND.git /RENAMER_BOT-5       
+  git clone https://github.com/Thorappan-TG/MR-PANDA-BOT.git /MR-PANDA-BOT       
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /RENAMER_BOT-5
+  git clone $UPSTREAM_REPO /MR-PANDA-BOT
 fi
-cd /RENAMER_BOT-5
+cd /MR-PANDA-BOT
 pip3 install -U -r requirements.txt
-echo "❣️❣️❣️❣️❣️❣️❣️❣️❣️"
+echo """
+---------------
+| BOT IS REDY |
+---------------
+"""
 python3 bot.py
