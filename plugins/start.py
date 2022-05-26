@@ -4,6 +4,8 @@ import humanize
 from Translation import mr
 from helper.database import  insert 
 from helper.utils import not_subscribed 
+from config import ADMIN
+
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def is_not_subscribed(client, message):
